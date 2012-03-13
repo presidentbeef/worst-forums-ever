@@ -122,6 +122,6 @@ class UsersController < ApplicationController
   end
 
   def results
-    @users = User.all(:conditions => "display_name like '%#{params[:query]}%' AND admin IS NOT 't'")
+    @users = User.all(:conditions => "display_name like '%#{params[:query]}%'")
   end
 end
